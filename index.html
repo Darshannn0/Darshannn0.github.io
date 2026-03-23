@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Principal – Vijaygarh Jyotish Ray College</title>
+  <style>
+    /* ── Reset & base ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f5f6fa;
+      color: #2c3e50;
+      line-height: 1.7;
+    }
+    a { color: #2980b9; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ── Header / hero ── */
+    header {
+      background: linear-gradient(135deg, #1a3c6e 0%, #2980b9 100%);
+      color: #fff;
+      padding: 48px 24px 40px;
+      text-align: center;
+    }
+    .college-logo {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.15);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.8rem;
+      margin-bottom: 16px;
+      border: 3px solid rgba(255,255,255,0.5);
+    }
+    header h1 { font-size: 2rem; font-weight: 700; margin-bottom: 4px; }
+    header h2 { font-size: 1.1rem; font-weight: 400; opacity: 0.88; margin-bottom: 8px; }
+    .college-name {
+      font-size: 0.95rem;
+      letter-spacing: 0.05em;
+      opacity: 0.75;
+      text-transform: uppercase;
+    }
+
+    /* ── Nav ── */
+    nav {
+      background: #1a3c6e;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 4px;
+      padding: 8px 16px;
+    }
+    nav a {
+      color: #cbd9f0;
+      padding: 6px 18px;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      transition: background 0.2s;
+    }
+    nav a:hover { background: rgba(255,255,255,0.12); color: #fff; text-decoration: none; }
+
+    /* ── Main layout ── */
+    main {
+      max-width: 960px;
+      margin: 40px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 28px;
+    }
+    @media (max-width: 680px) {
+      main { grid-template-columns: 1fr; }
+    }
+
+    /* ── Cards ── */
+    .card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 28px 24px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+    }
+    .card h3 {
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #1a3c6e;
+      border-bottom: 2px solid #2980b9;
+      padding-bottom: 8px;
+      margin-bottom: 16px;
+    }
+    .profile-photo {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      background: #d6e4f0;
+      margin: 0 auto 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3.5rem;
+    }
+    .sidebar-name { text-align: center; font-weight: 700; font-size: 1.05rem; }
+    .sidebar-title { text-align: center; color: #555; font-size: 0.9rem; margin-bottom: 16px; }
+
+    .info-row { display: flex; gap: 8px; margin-bottom: 10px; font-size: 0.92rem; }
+    .info-label { font-weight: 600; min-width: 80px; color: #1a3c6e; }
+
+    /* ── Timeline ── */
+    .timeline { list-style: none; position: relative; padding-left: 20px; }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 6px; top: 4px; bottom: 4px;
+      width: 2px;
+      background: #2980b9;
+    }
+    .timeline li { position: relative; margin-bottom: 18px; }
+    .timeline li::before {
+      content: '';
+      position: absolute;
+      left: -18px; top: 6px;
+      width: 10px; height: 10px;
+      border-radius: 50%;
+      background: #2980b9;
+      border: 2px solid #fff;
+    }
+    .tl-year { font-weight: 700; color: #1a3c6e; font-size: 0.85rem; }
+    .tl-desc { font-size: 0.92rem; }
+
+    /* ── Quote ── */
+    blockquote {
+      border-left: 4px solid #2980b9;
+      margin: 0 0 16px;
+      padding: 10px 16px;
+      background: #eaf4fb;
+      border-radius: 0 6px 6px 0;
+      font-style: italic;
+      color: #34495e;
+    }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      padding: 28px 16px;
+      font-size: 0.85rem;
+      color: #777;
+      border-top: 1px solid #dde3ec;
+      margin-top: 40px;
+    }
+    footer strong { color: #1a3c6e; }
+  </style>
+</head>
+<body>
+
+  <!-- ═══ Header ═══ -->
+  <header>
+    <div class="college-logo" role="img" aria-label="College logo">🏛️</div>
+    <h1>Office of the Principal</h1>
+    <h2>Vijaygarh Jyotish Ray College</h2>
+    <p class="college-name">Kolkata · West Bengal · Established 1950</p>
+  </header>
+
+  <!-- ═══ Navigation ═══ -->
+  <nav>
+    <a href="#about">About</a>
+    <a href="#academic">Academic Journey</a>
+    <a href="#vision">Vision &amp; Message</a>
+    <a href="#achievements">Achievements</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- ═══ Main content ═══ -->
+  <main>
+
+    <!-- Sidebar -->
+    <aside>
+      <div class="card" id="about">
+        <div class="profile-photo" role="img" aria-label="Principal profile placeholder">👤</div>
+        <p class="sidebar-name">Principal</p>
+        <p class="sidebar-title">Vijaygarh Jyotish Ray College</p>
+        <h3>Profile</h3>
+        <div class="info-row">
+          <span class="info-label">Role</span>
+          <span>Principal</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">College</span>
+          <span>Vijaygarh Jyotish Ray College</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">Affiliated</span>
+          <span>University of Calcutta</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">Location</span>
+          <span>Kolkata, West Bengal, India</span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main column -->
+    <section>
+
+      <!-- Vision & Message -->
+      <div class="card" id="vision" style="margin-bottom:28px;">
+        <h3>Principal's Message</h3>
+        <blockquote>
+          "Education is not just the acquisition of knowledge; it is the cultivation of wisdom, character,
+          and the courage to serve society."
+        </blockquote>
+        <p style="margin-bottom:12px;">
+          Welcome to the official page of the Principal's Office, Vijaygarh Jyotish Ray College.
+          Our college has long stood as a beacon of quality education and holistic development in
+          West Bengal. We are committed to nurturing future leaders who are academically excellent,
+          socially responsible, and globally aware.
+        </p>
+        <p>
+          Under the aegis of the University of Calcutta, we continue to uphold the founding values
+          of our institution — equity, excellence, and empowerment — while embracing modern
+          pedagogical approaches that prepare our students for an ever-changing world.
+        </p>
+      </div>
+
+      <!-- Academic Journey -->
+      <div class="card" id="academic" style="margin-bottom:28px;">
+        <h3>Academic Journey</h3>
+        <ul class="timeline">
+          <li>
+            <p class="tl-year">Doctoral Degree (Ph.D.)</p>
+            <p class="tl-desc">Specialisation in the core discipline, with research contributing to national academic discourse.</p>
+          </li>
+          <li>
+            <p class="tl-year">Post-Graduate (M.Sc. / M.A.)</p>
+            <p class="tl-desc">Meritorious post-graduation from the University of Calcutta.</p>
+          </li>
+          <li>
+            <p class="tl-year">Bachelor's Degree</p>
+            <p class="tl-desc">First-class graduate, laying the foundation for an illustrious academic career.</p>
+          </li>
+          <li>
+            <p class="tl-year">Faculty &amp; Administrative Career</p>
+            <p class="tl-desc">Served as faculty and senior administrator in colleges affiliated with the University of Calcutta before assuming the role of Principal.</p>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Achievements -->
+      <div class="card" id="achievements">
+        <h3>Key Achievements &amp; Initiatives</h3>
+        <ul style="padding-left:20px; font-size:0.93rem;">
+          <li style="margin-bottom:8px;">Strengthened the NAAC accreditation framework of the college.</li>
+          <li style="margin-bottom:8px;">Expanded academic programmes to meet evolving student and industry needs.</li>
+          <li style="margin-bottom:8px;">Promoted research culture through faculty development programmes and MoUs.</li>
+          <li style="margin-bottom:8px;">Enhanced campus infrastructure and digital learning resources.</li>
+          <li style="margin-bottom:8px;">Launched scholarship and mentorship drives for first-generation learners.</li>
+          <li>Fostered community outreach programmes connecting the college with the local neighbourhood.</li>
+        </ul>
+      </div>
+
+    </section>
+  </main>
+
+  <!-- ═══ Contact ═══ -->
+  <div id="contact" style="max-width:960px; margin:0 auto 40px; padding:0 20px;">
+    <div class="card">
+      <h3>Contact the Principal's Office</h3>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; font-size:0.93rem;">
+        <div>
+          <p style="font-weight:600; color:#1a3c6e; margin-bottom:6px;">Address</p>
+          <p>Vijaygarh Jyotish Ray College<br>
+             Jadavpur, Kolkata – 700 032<br>
+             West Bengal, India</p>
+        </div>
+        <div>
+          <p style="font-weight:600; color:#1a3c6e; margin-bottom:6px;">Office Hours</p>
+          <p>Monday – Friday: 10:00 AM – 5:00 PM<br>
+             Saturday: 10:00 AM – 1:00 PM</p>
+        </div>
+        <div>
+          <p style="font-weight:600; color:#1a3c6e; margin-bottom:6px;">Phone</p>
+          <p>Please contact the college administration office for the phone number.</p>
+        </div>
+        <div>
+          <p style="font-weight:600; color:#1a3c6e; margin-bottom:6px;">Email</p>
+          <p><a href="mailto:principal@vjrc.ac.in">principal@vjrc.ac.in</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ Footer ═══ -->
+  <footer>
+    <p><strong>Vijaygarh Jyotish Ray College</strong> · Affiliated to the University of Calcutta</p>
+    <p style="margin-top:4px;">Jadavpur, Kolkata – 700 032, West Bengal, India</p>
+  </footer>
+
+</body>
+</html>
